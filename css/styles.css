@@ -110,31 +110,20 @@ p {
 .header-contact:last-child {
   margin-right: 0;
 }
-.contact-icon {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: #757575;
-}
-.contact-phone {
-  width: 10px;
-  height: 16px;
-}
-/* .contact-icon:hover {
-  fill: var(--acent-color);
-} */
 .contact-link {
   color: var(--primary-text-color);
+  fill: #757575;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
 .contact-link:hover,
 .contact-link:focus {
   color: var(--acent-color);
-}
-.header-contact:hover .contact-icon {
-  fill: var(--acent-color);
 }
 /*hero*/
 
@@ -284,17 +273,21 @@ p {
   margin-right: 10px;
   padding: 12px;
 }
-.social-network {
-  width: 20px;
-  height: 20px;
+.social-network-link {
   fill: #afb1b8;
 }
 .item-icon:hover {
   background-color: var(--acent-color);
   cursor: pointer;
 }
-.item-icon:hover .social-network {
-  fill: #fff;
+.item-icon:focus-within {
+  background-color: var(--acent-color);
+}
+.social-network-link:focus {
+  fill: var(--primary-white-color);
+}
+.item-icon:hover .social-network-link {
+  fill: var(--primary-white-color);
 }
 /*clients*/
 .clients-title {
@@ -317,15 +310,15 @@ p {
 .client-item:last-child {
   margin-right: 0;
 }
-.client-icon {
+.client-link {
   fill: #afb1b8;
-  width: 106px;
-  height: 60px;
 }
-.client-item:hover {
+.client-item:hover,
+.client-item:focus-within {
   border: 1px solid var(--acent-color);
 }
-.client-item:hover .client-icon {
+.client-item:hover .client-link,
+.client-link:focus {
   fill: var(--acent-color);
 }
 /*footer*/
@@ -341,10 +334,14 @@ p {
   line-height: 1.71;
   font-style: normal;
 }
-.footer-contact {
+.footer-link {
   color: var(--contact-down-color);
   line-height: 1.71;
   font-style: normal;
+}
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--acent-color);
 }
 .footer {
   background-color: var(--background-dark-color);
@@ -376,17 +373,22 @@ p {
   padding: 12px;
   background-color: rgba(255, 255, 255, 0.1);
 }
+.footer-item-link {
+  fill: #afb1b8;
+}
 .footer-item-icon:hover {
   background-color: var(--acent-color);
   cursor: pointer;
 }
-.footer-item-icon:hover .footer-social-network {
-  fill: #fff;
+.footer-item-icon:hover .footer-item-link {
+  fill: var(--primary-white-color);
 }
-.footer-social-network {
-  width: 20px;
-  height: 20px;
-  fill: #afb1b8;
+.footer-item-icon:focus-within {
+  background-color: var(--acent-color);
+}
+
+.footer-item-link:focus {
+  fill: var(--primary-white-color);
 }
 
 /*Портфоліо*/
